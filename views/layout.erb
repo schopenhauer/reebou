@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% unless GOOGLE_ANALYTICS_ID.nil? %>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= GOOGLE_ANALYTICS_ID %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<%= GOOGLE_ANALYTICS_ID %>');
+  </script>
+  <% end %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= encode(APP_TITLE) %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="<%= path %>/css/app.css" />
+  <link rel="shortcut icon" href="<%= path %>/favicon.ico" type="image/x-icon" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+</html>

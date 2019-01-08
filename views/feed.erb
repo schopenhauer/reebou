@@ -1,0 +1,16 @@
+<div class="cell large-auto" style="background-color: <%= bgcolor %>">
+  <h1 class="<%= theme %>">
+    <% if website %>
+    <a href="<%= website %>" target="_new"><%= name %></a>
+    <% else %>
+    <%= name %>
+    <% end %>
+  </h1>
+  <ul>
+    <%= partial (podcast ? :podcast : :entry),
+      name: name,
+      theme: theme,
+      entries: feeds.entries
+    %>
+  </ul>
+</div>

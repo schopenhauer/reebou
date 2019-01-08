@@ -1,0 +1,75 @@
+---
+feeds:
+  rtl:
+    bgcolor: "#ff0000"
+    theme: "white"
+    name: "RTL"
+    web: "http://www.rtl.lu"
+    url: "http://www.rtl.lu/rss/national/"
+  jeudi:
+    bgcolor: "#ff3366"
+    theme: "white"
+    name: "Le Jeudi"
+    web: "http://www.jeudi.lu"
+    url: "http://www.jeudi.lu/feed/"
+  honnert:
+    bgcolor: "#ff8a00"
+    theme: "white"
+    name: "100,7"
+    web: "https://www.100komma7.lu"
+    url: "https://www.100komma7.lu/show/269/rss"
+    podcast: true
+  paperjam:
+    bgcolor: "#ffcd28"
+    theme: "black"
+    name: "Paperjam"
+    web: "http://paperjam.lu"
+    url: "http://paperjam.lu/feed.rss"
+  wort:
+    bgcolor: "#ffffff"
+    theme: "black"
+    name: "Wort"
+    web: "http://www.wort.lu"
+    url: "http://www.wort.lu/rss/de"
+  wurst:
+    bgcolor: "#f1f1f1"
+    theme: "black"
+    name: "Wurst"
+    web: "http://wurst.lu"
+    url: "http://wurst.lu/feed/"
+  tageblatt:
+    bgcolor: "#dedede"
+    theme: "black"
+    name: "Tageblatt"
+    web: "http://www.tageblatt.lu"
+    url: "http://www.tageblatt.lu/category/nachrichten/feed/atom/"
+  woxx:
+    bgcolor: "#009980"
+    theme: "white"
+    name: "Woxx"
+    web: "http://www.woxx.lu"
+    url: "http://www.woxx.lu/?feed=rss2"
+  quotidien:
+    bgcolor: "#6699cc"
+    theme: "white"
+    name: "Quotidien"
+    web: "http://www.lequotidien.lu"
+    url: "http://www.lequotidien.lu/feed/"
+  land:
+    bgcolor: "#009fee"
+    theme: "white"
+    name: "Land"
+    web: "http://land.lu"
+    url: "http://land.lu/online/www/rss/DEU/feed.rss"
+  essentiel:
+    bgcolor: "#274ca0"
+    theme: "white"
+    name: "L'Essentiel"
+    web: "http://www.lessentiel.lu"
+    url: "http://www.lessentiel.lu/rss/front.tmpl"
+  reporter:
+    bgcolor: "#000000"
+    theme: "white"
+    name: "Reporter.lu"
+    web: "https://www.reporter.lu"
+    url: "https://www.reporter.lu/feed/"

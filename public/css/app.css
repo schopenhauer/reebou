@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+::selection {
+  background: #000000; /* WebKit/Blink Browsers */
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #000000; /* Gecko Browsers */
+  color: #ffffff;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.full {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+@media (min-width:500px) {
+  .outer { overflow: auto; height: 100vh }
+  .inner { overflow: hidden; height: 100% }
+}
+
+@media (max-width:499px) {
+  .outer { overflow: auto }
+  .inner { overflow: auto }
+  html, body { font-size: 14px }
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 9px;
+}
+
+h1 a {
+  cursor: zoom-in;
+}
+
+h1.black a {
+  color: #000000;
+}
+
+h1.white a {
+  color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 0 10px 0;
+}
+
+li {
+  padding-bottom: 2px;
+}
+
+li.black a:link, li.black a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+li.black a:visited {
+  color: #666666;
+  font-size: 12px;
+}
+
+li.black a:hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+li.white a:link, li.white a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li.white a:visited {
+  color: #dedede;
+  cursor: copy;
+}
+
+li.white a:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+small {
+  font-size: 12px;
+}
+
+small span.author {
+  font-style: italic;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+}

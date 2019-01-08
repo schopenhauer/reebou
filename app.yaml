@@ -1,0 +1,3 @@
+entrypoint: bundle exec puma -C config/puma.rb
+env: flex
+runtime: ruby

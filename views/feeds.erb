@@ -1,0 +1,14 @@
+<div class="grid-container fluid full">
+  <div class="grid-x grid-padding-x">
+    <% feeds.each do |feed, feeds| %>
+      <%= partial :feed,
+        name: settings.feeds[feed]['name'],
+        website: settings.feeds[feed]['web'],
+        bgcolor: settings.feeds[feed]['bgcolor'],
+        theme: settings.feeds[feed]['theme'],
+        podcast: settings.feeds[feed]['podcast'] == true ? true : false,
+        feeds: feeds
+      %>
+    <% end %>
+  </div>
+</div>
