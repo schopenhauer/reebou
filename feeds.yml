@@ -14,17 +14,11 @@ feeds:
     url: "https://www.100komma7.lu/show/269/rss"
     podcast: true
   jeudi:
-    bgcolor: "#ffe500"
+    bgcolor: "#ffcd28"
     theme: "black"
     name: "Le Jeudi"
     web: "http://www.jeudi.lu"
     url: "http://www.jeudi.lu/feed/"
-  # paperjam:
-  #   bgcolor: "#ffcd28"
-  #   theme: "black"
-  #   name: "Paperjam"
-  #   web: "http://paperjam.lu"
-  #   url: "http://paperjam.lu/feed.rss"
   wort:
     bgcolor: "#ffffff"
     theme: "black"
