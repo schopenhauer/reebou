@@ -6,12 +6,6 @@ feeds:
     name: "RTL"
     web: "http://www.rtl.lu"
     url: "http://www.rtl.lu/rss/national/"
-  jeudi:
-    bgcolor: "#ff3366"
-    theme: "white"
-    name: "Le Jeudi"
-    web: "http://www.jeudi.lu"
-    url: "http://www.jeudi.lu/feed/"
   honnert:
     bgcolor: "#ff8a00"
     theme: "white"
@@ -19,12 +13,18 @@ feeds:
     web: "https://www.100komma7.lu"
     url: "https://www.100komma7.lu/show/269/rss"
     podcast: true
-  paperjam:
-    bgcolor: "#ffcd28"
+  jeudi:
+    bgcolor: "#ffe500"
     theme: "black"
-    name: "Paperjam"
-    web: "http://paperjam.lu"
-    url: "http://paperjam.lu/feed.rss"
+    name: "Le Jeudi"
+    web: "http://www.jeudi.lu"
+    url: "http://www.jeudi.lu/feed/"
+  # paperjam:
+  #   bgcolor: "#ffcd28"
+  #   theme: "black"
+  #   name: "Paperjam"
+  #   web: "http://paperjam.lu"
+  #   url: "http://paperjam.lu/feed.rss"
   wort:
     bgcolor: "#ffffff"
     theme: "black"
