@@ -75,7 +75,7 @@ def get(url)
   end
   puts "Fetching: #{url}"
   feed = APICache.get(url, API_CACHE_OPTIONS)
-  Feedjira::Feed.parse(feed)
+  Feedjira.parse(feed)
 end
 
 def partial(template, locals = {})

@@ -16,9 +16,9 @@ feeds:
   jeudi:
     bgcolor: "#ffcd28"
     theme: "black"
-    name: "Le Jeudi"
-    web: "http://www.jeudi.lu"
-    url: "http://www.jeudi.lu/feed/"
+    name: "Silicon Lux"
+    web: "https://www.siliconluxembourg.lu"
+    url: "https://www.siliconluxembourg.lu/feed/"
   wort:
     bgcolor: "#ffffff"
     theme: "black"
@@ -64,6 +64,6 @@ feeds:
   reporter:
     bgcolor: "#000000"
     theme: "white"
-    name: "Reporter.lu"
+    name: "Reporter"
     web: "https://www.reporter.lu"
     url: "https://www.reporter.lu/feed/"
