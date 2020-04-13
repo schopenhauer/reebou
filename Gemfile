@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+
+ruby ENV['CUSTOM_RUBY_VERSION'] || '2.7.1'
 
 group :sinatra do
   gem 'sinatra'
@@ -11,7 +12,7 @@ gem 'binding_of_caller'
 gem 'dalli'
 gem 'api_cache'
 gem 'feedjira'
-gem 'nokogiri', '>= 1.10.4'
+gem 'nokogiri'
 gem 'htmlentities'
 gem 'dotenv'
 gem 'puma'
