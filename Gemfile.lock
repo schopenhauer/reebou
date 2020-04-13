@@ -61,10 +61,13 @@ DEPENDENCIES
   dotenv
   feedjira
   htmlentities
-  nokogiri (>= 1.10.4)
+  nokogiri
   puma
   sinatra
   sinatra-contrib
+
+RUBY VERSION
+   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4
