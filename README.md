@@ -2,7 +2,7 @@
 
 Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in the Ruby framework [Sinatra](http://www.sinatrarb.com/) and pre-configured to read Luxembourgish (Lëtzebuergesch) newspapers and tabloids.
 
-<img src="https://github.com/schopenhauer/reebou/blob/master/public/screenshot-sm.png">
+<img src="https://github.com/schopenhauer/reebou/blob/main/public/screenshot-sm.png">
 
 ## Features
 
