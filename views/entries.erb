@@ -1,16 +1,14 @@
 <ul>
-  <% entries.each do |entry| %>
+  <% entries.first(40).each do |entry| %>
   <li class="<%= feed['theme'] %>">
-    <a href="<%= find_url(entry) %>" target="_blank" title="<%= clean(entry.summary) %>">
-      <span>
-        <i class="fas fa-angle-right"></i> <%= clean(entry.title) %>
-      </span>
-      <% unless entry.author.nil? %>
-        <small>
-          by <span class="author" title="Published on <%= timestamp(entry.published) %>"><%= uppercase(entry.author) %></span>
-        </small>
-      <% end %>
+    <a href="<%= find_url(entry) %>" target="_blank" title="<%= clean (entry.summary ? entry.summary : entry.content) %>">
+      <i class="fas fa-angle-right"></i> <%= clean(entry.title) %>
     </a>
+    <% unless entry.author.nil? %>
+    <small>
+      by <span class="author" title="This article was published on <%= timestamp(entry.published) %>."><%= uppercase(entry.author) %></span>
+    </small>
+    <% end %>
   </li>
   <% end %>
 </ul>

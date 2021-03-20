@@ -36,7 +36,7 @@ Reebou works out of the box with [Memcached](https://memcached.org/) and [Memcac
 | `MEMCACHED_USERNAME` or `MEMCACHIER_USERNAME` | _to be set_ | Memcached username |
 | `MEMCACHED_PASSWORD` or `MEMCACHIER_PASSWORD` | _to be set_ | Memcached password |
 | `MEMCACHED_TTL` | `604800` seconds (1 week) | Memcached expiry time |
-| `CACHE_TIME` | `900` (15 minutes) | Minimum cache period |
+| `CACHE_TIME` | `1800` (30 minutes) | Minimum cache period |
 | `CACHE_EXPIRY` | `86400` (24 hours) | Maximum cache expiry |
 | `CACHE_FREQUENCY` | `300` (5 minutes) | Maximum query frequency (`0` = unlimited) |
 | `CACHE_TIMEOUT` | `30` (30 seconds) | Maximum timeout |

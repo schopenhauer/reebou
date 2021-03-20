@@ -1,18 +1,10 @@
 <ul>
-  <% entries.each do |entry| %>
+  <% entries.first(20).each do |entry| %>
   <li class="<%= feed['theme'] %>">
-    <a href="<%= entry.url %>" target="_blank" title="<%= clean(enumerate(entry.summary)) %>">
-      <span title="Published on <%= timestamp(entry.published) %>">
-        <i class="fas fa-angle-right"></i> <%= clean(entry.itunes_subtitle) %>
-      </span>
-      <!-- <% unless entry.author.nil? %>
-      <small>
-        by <span class="author"><%= uppercase(entry.author) %></span>
-      </small>
-      <% end %> -->
+    <a href="<%= entry.url %>" target="_blank" title="<%= clean(enumerate(entry.summary)) + "\n\nPublished on " + timestamp(entry.published) %>">
+      <i class="fas fa-angle-right"></i> <%= clean(entry.itunes_subtitle) %>
     </a>
-    &nbsp;
-    <a href="<%= entry.entry_id %>" target="_blank" title="Click here to listen to the podcast (duration: <%= entry.itunes_duration %>)" class="<%= feed['theme'] %>">
+    <a href="<%= entry.entry_id %>" target="_blank" title="Listen to the podcast (duration: <%= entry.itunes_duration %>)" class="<%= feed['theme'] %>">
       <i class="fas fa-microphone"></i>
     </a>
   </li>

@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
 
-::selection {
-  background: #000000; /* WebKit/Blink Browsers */
-  color: #ffffff;
-}
-
-::-moz-selection {
-  background: #000000; /* Gecko Browsers */
-  color: #ffffff;
-}
-
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -41,10 +31,6 @@ h1 {
   margin-top: 9px;
 }
 
-/*h1 a {
-  cursor: zoom-in;
-}*/
-
 h1.black a {
   color: #000000;
 }
@@ -64,12 +50,10 @@ li {
 
 li.black a:link, li.black a:active {
   color: #000000;
-  text-decoration: none;
 }
 
 li.black a:visited {
   color: #666666;
-  font-size: 12px;
 }
 
 li.black a:hover {
@@ -79,7 +63,6 @@ li.black a:hover {
 
 li.white a:link, li.white a:active {
   color: #ffffff;
-  text-decoration: none;
 }
 
 li.white a:visited {
@@ -91,8 +74,14 @@ li.white a:hover {
   font-weight: 600;
 }
 
-small {
-  font-size: 12px;
+li.black small {
+  font-size: 10px;
+  color: #666666;
+}
+
+li.white small {
+  font-size: 10px;
+  color: #eeeeee;
 }
 
 small span.author {

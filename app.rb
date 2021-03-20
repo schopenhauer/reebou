@@ -27,13 +27,13 @@ configure do
   MEMCACHED_URL = ENV['MEMCACHED_URL'] || ENV['MEMCACHIER_SERVERS']
   MEMCACHED_USERNAME = ENV['MEMCACHED_USERNAME'] || ENV['MEMCACHIER_USERNAME']
   MEMCACHED_PASSWORD = ENV['MEMCACHED_PASSWORD'] || ENV['MEMCACHIER_PASSWORD']
-  MEMCACHED_TTL = ENV['MEMCACHED_TTL'] || 604_800 # 1 week
+  MEMCACHED_TTL = ENV['MEMCACHED_TTL'] || 604_800
 
   CACHE_OPTIONS = {
-    cache: ENV['CACHE_TIME'] || 900, # 15 minutes
-    valid: ENV['CACHE_EXPIRY'] || 86_400, # 24 hours
-    period: ENV['CACHE_FREQUENCY'] || 300, # 5 minutes
-    timeout: ENV['CACHE_TIMEOUT'] || 30 # 30 seconds
+    cache: ENV['CACHE_TIME'] || 1_800,
+    valid: ENV['CACHE_EXPIRY'] || 86_400,
+    period: ENV['CACHE_FREQUENCY'] || 300,
+    timeout: ENV['CACHE_TIMEOUT'] || 30
   }
 
   config_file 'feeds.yml'
@@ -51,7 +51,7 @@ get '/' do
   @base_url = remove_trailing_slash(request_uri)
   erb :feeds, locals: {
     feeds: settings.feeds,
-    entries: entries,
+    entries: entries
   }
 end
 
