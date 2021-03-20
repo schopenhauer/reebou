@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 
 ::selection {
   background: #000000; /* WebKit/Blink Browsers */
@@ -41,9 +41,9 @@ h1 {
   margin-top: 9px;
 }
 
-h1 a {
+/*h1 a {
   cursor: zoom-in;
-}
+}*/
 
 h1.black a {
   color: #000000;
@@ -98,9 +98,4 @@ small {
 
 small span.author {
   font-style: italic;
-}
-
-hr {
-  padding: 0;
-  margin: 0;
 }

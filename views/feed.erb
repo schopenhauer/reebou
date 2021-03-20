@@ -1,16 +1,8 @@
-<div class="cell large-auto" style="background-color: <%= bgcolor %>">
-  <h1 class="<%= theme %>">
-    <% if website %>
-    <a href="<%= website %>" target="_new"><%= name %></a>
-    <% else %>
-    <%= name %>
-    <% end %>
+<div class="cell large-auto" style="background-color: <%= feed['bgcolor'] %>">
+  <h1 class="<%= feed['theme'] %>">
+    <a href="<%= feed['web'] %>" target="_blank">
+      <i class="fas fa-rss-square"></i> <%= feed['name'] %>
+    </a>
   </h1>
-  <ul>
-    <%= partial (podcast ? :podcast : :entry),
-      name: name,
-      theme: theme,
-      entries: feeds.entries
-    %>
-  </ul>
+  <%= partial (feed['podcast'] ? :podcasts : :entries), feed: feed, entries: entries %>
 </div>
