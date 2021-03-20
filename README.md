@@ -10,7 +10,7 @@ Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in [Sina
 - I read RSS, XML and Atom feeds
 - I am respectful and cache feeds
 - I am lightening fast
-- I am colorful
+- I am colourful
 - I am made in Luxembourg with :heart:
 
 ## Usage
@@ -35,7 +35,7 @@ Reebou works out of the box with [Memcached](https://memcached.org/) and [Memcac
 | `MEMCACHED_URL` or `MEMCACHIER_SERVERS` | _to be set_ | Memcached server or socket |
 | `MEMCACHED_USERNAME` or `MEMCACHIER_USERNAME` | _to be set_ | Memcached username |
 | `MEMCACHED_PASSWORD` or `MEMCACHIER_PASSWORD` | _to be set_ | Memcached password |
-| `MEMCACHED_TTL` | `604800` seconds (1 week) | Memcached expiry time |
+| `MEMCACHED_TTL` | `604800` (7 days) | Memcached expiry time |
 | `CACHE_TIME` | `1800` (30 minutes) | Minimum cache period |
 | `CACHE_EXPIRY` | `86400` (24 hours) | Maximum cache expiry |
 | `CACHE_FREQUENCY` | `300` (5 minutes) | Maximum query frequency (`0` = unlimited) |
