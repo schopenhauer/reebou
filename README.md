@@ -1,6 +1,6 @@
 # reebou
 
-Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in [Sinatra](http://www.sinatrarb.com/), a Ruby framework, and pre-configured to read [Luxembourgish](https://en.wikipedia.org/wiki/Luxembourgish) ([Lëtzebuergesch](https://lb.wikipedia.org/wiki/L%C3%ABtzebuergesch)) newspapers and tabloids.
+Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in [Sinatra](http://www.sinatrarb.com/), a Ruby framework, and pre-configured to fetch and read [Luxembourgish](https://en.wikipedia.org/wiki/Luxembourgish) ([Lëtzebuergesch](https://lb.wikipedia.org/wiki/L%C3%ABtzebuergesch)) newspapers and tabloids.
 
 <img src="https://github.com/schopenhauer/reebou/blob/main/public/images/screenshot-sm.png">
 
@@ -15,9 +15,7 @@ Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in [Sina
 
 ## Usage
 
-You can add, edit, remove and customise feeds in the `feeds.yml` configuration file.
-
-Once configured, please make sure to install the gems and run the app.
+You can add, edit, remove and customise feeds in the `feeds.yml` configuration file. Once configured, please make sure to install the gems and run the app.
 
 ```sh
 bundle install
