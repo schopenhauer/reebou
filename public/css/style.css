@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
 
 ::selection {
   background: #000000; /* WebKit/Blink Browsers */
@@ -36,7 +36,7 @@ html, body {
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 20px;
   margin-top: 9px;
 }
@@ -74,7 +74,7 @@ li.black a:visited {
 
 li.black a:hover {
   color: #000000;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 li.white a:link, li.white a:active {
@@ -83,13 +83,12 @@ li.white a:link, li.white a:active {
 }
 
 li.white a:visited {
-  color: #dedede;
-  cursor: copy;
+  color: #eeeeee;
 }
 
 li.white a:hover {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 small {

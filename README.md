@@ -8,7 +8,7 @@ Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in [Sina
 
 - I work out of the box (zero configuration)
 - I read RSS, XML and Atom feeds
-- I am respectful and will cache feeds
+- I am respectful and cache feeds
 - I am lightening fast
 - I am colorful
 - I am made in Luxembourg with :heart:

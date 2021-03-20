@@ -65,7 +65,7 @@ def fetch(url)
   puts "Fetching: #{url}"
   begin
     client = Dalli::Client.new(
-      [ MEMCACHED_URL, 'localhost:11211', '/var/run/memcached/socket' ].compact,
+      [ MEMCACHED_URL, 'localhost:11211' ].compact,
       username: MEMCACHED_USERNAME,
       password: MEMCACHED_PASSWORD,
       expires_in: MEMCACHED_TTL,
