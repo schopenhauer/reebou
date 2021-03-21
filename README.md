@@ -36,10 +36,11 @@ Reebou works out of the box with [Memcached](https://memcached.org/) and [Memcac
 | `MEMCACHED_USERNAME` or `MEMCACHIER_USERNAME` | _to be set_ | Memcached username |
 | `MEMCACHED_PASSWORD` or `MEMCACHIER_PASSWORD` | _to be set_ | Memcached password |
 | `MEMCACHED_TTL` | `604800` (7 days) | Memcached expiry time |
-| `CACHE_TIME` | `1800` (30 minutes) | Minimum cache period |
-| `CACHE_EXPIRY` | `86400` (24 hours) | Maximum cache expiry |
-| `CACHE_FREQUENCY` | `300` (5 minutes) | Maximum query frequency (`0` = unlimited) |
-| `CACHE_TIMEOUT` | `30` (30 seconds) | Maximum timeout |
+| `CACHE_TIME` | `3600` (1 hour) | After this time fetch new data |
+| `CACHE_VALID` | `86400` (1 day) | Maximum time to use old data |
+| `CACHE_PERIOD` | `600` (10 minutes) | Maximum query frequency (e.g. `0` = unlimited) |
+| `CACHE_TIMEOUT` | `15` (15 seconds) | HTTP response timeout |
+| `AUTO_FETCH` | _optional_ | Enable automatic feed fetching (e.g. `1h` = every hour) |
 
 ### Memcached commands
 

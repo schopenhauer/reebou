@@ -7,6 +7,7 @@ require 'api_cache'
 require 'dalli'
 require 'htmlentities'
 require 'nokogiri'
+require 'rufus-scheduler'
 require 'dotenv'
 Dotenv.load
 
@@ -23,6 +24,7 @@ configure do
   URL_REGEX = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix
 
   GOOGLE_ANALYTICS_ID = ENV['GOOGLE_ANALYTICS_ID'] # optional
+  AUTO_FETCH = ENV['AUTO_FETCH'] # optional, e.g. 1h
 
   MEMCACHED_URL = ENV['MEMCACHED_URL'] || ENV['MEMCACHIER_SERVERS']
   MEMCACHED_USERNAME = ENV['MEMCACHED_USERNAME'] || ENV['MEMCACHIER_USERNAME']
@@ -30,11 +32,13 @@ configure do
   MEMCACHED_TTL = ENV['MEMCACHED_TTL'] || 604_800
 
   CACHE_OPTIONS = {
-    cache: ENV['CACHE_TIME'] || 1_800,
-    valid: ENV['CACHE_EXPIRY'] || 86_400,
-    period: ENV['CACHE_FREQUENCY'] || 300,
-    timeout: ENV['CACHE_TIMEOUT'] || 30
+    cache: ENV['CACHE_TIME'] || 3_600,
+    valid: ENV['CACHE_VALID'] || 86_400,
+    period: ENV['CACHE_PERIOD'] || 600,
+    timeout: ENV['CACHE_TIMEOUT'] || 15
   }
+
+  VERBOSE = ENV['VERBOSE'] || false
 
   config_file 'feeds.yml'
 end
@@ -44,9 +48,17 @@ get '/robots.txt' do
   body "User-agent: *\nDisallow: /"
 end
 
+unless AUTO_FETCH.nil?
+  scheduler = Rufus::Scheduler.new
+  puts "Enable automatic fetch (every #{AUTO_FETCH})" if VERBOSE
+  scheduler.every AUTO_FETCH do
+    puts 'Automatically fetching feeds' if VERBOSE
+    fetch_all
+  end
+end
+
 get '/' do
-  entries = {}
-  settings.feeds.map { |name, feed| entries[name] = fetch(feed['rss']) }
+  entries = fetch_all
   request_uri = request.env['HTTP_FORWARDED_REQUEST_URI'] || request.env['REQUEST_URI']
   @base_url = remove_trailing_slash(request_uri)
   erb :feeds, locals: {
@@ -62,7 +74,7 @@ end
 private
 
 def fetch(url)
-  puts "Fetching: #{url}"
+  puts "Fetching: #{url}" if VERBOSE
   begin
     client = Dalli::Client.new(
       [ MEMCACHED_URL, 'localhost:11211' ].compact,
@@ -80,6 +92,12 @@ def fetch(url)
     feed = APICache.get(url, CACHE_OPTIONS)
   end
   Feedjira.parse(feed).entries
+end
+
+def fetch_all
+  entries = {}
+  settings.feeds.map { |name, feed| entries[name] = fetch(feed['rss']) }
+  entries
 end
 
 def partial(template, locals = {})
