@@ -32,9 +32,9 @@ Reebou works out of the box with [Memcached](https://memcached.org/) and [Memcac
 
 | Environment variable | Default value | Description |
 |-----------| --------------|-------------|
-| `MEMCACHED_URL` <br>or `MEMCACHIER_SERVERS` | _to be set_ | Memcached server or socket |
-| `MEMCACHED_USERNAME` <br>or `MEMCACHIER_USERNAME` | _to be set_ | Memcached username |
-| `MEMCACHED_PASSWORD` <br>or `MEMCACHIER_PASSWORD` | _to be set_ | Memcached password |
+| `MEMCACHED_URL` or `MEMCACHIER_SERVERS` | _to be set_ | Memcached server or socket |
+| `MEMCACHED_USERNAME` or `MEMCACHIER_USERNAME` | _to be set_ | Memcached username |
+| `MEMCACHED_PASSWORD` or `MEMCACHIER_PASSWORD` | _to be set_ | Memcached password |
 | `MEMCACHED_TTL` | `604800` (7 days) | Memcached expiry time |
 | `CACHE_TIME` | `3600` (1 hour) | After this time fetch new data |
 | `CACHE_VALID` | `86400` (1 day) | Maximum time to use old data<br>(e.g `0` = forever) |
