@@ -73,7 +73,7 @@ DEPENDENCIES
   feedjira
   htmlentities
   nokogiri
-  puma
+  puma (>= 5.3.1)
   rufus-scheduler
   sinatra
   sinatra-contrib
