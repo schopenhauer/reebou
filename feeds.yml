@@ -14,11 +14,11 @@ feeds:
     rss: "https://www.100komma7.lu/show/269/rss"
     podcast: true
   siliconlux:
-    name: "Silicon Lux"
+    name: "Lux Times"
     bgcolor: "#ffcd28"
     theme: "black"
-    web: "https://www.siliconluxembourg.lu"
-    rss: "https://www.siliconluxembourg.lu/feed/"
+    web: "https://www.luxtimes.lu"
+    rss: "https://www.luxtimes.lu/rss/en"
   wort:
     name: "Wort"
     bgcolor: "#ffffff"
