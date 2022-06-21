@@ -56,11 +56,11 @@ feeds:
     web: "https://land.lu"
     rss: "https://land.lu/online/www/rss/DEU/feed.rss"
   lessentiel:
-    name: "L'Essentiel"
+    name: "L'essentiel"
     bgcolor: "#274ca0"
     theme: "white"
-    web: "http://www.lessentiel.lu"
-    rss: "http://www.lessentiel.lu/rss/front.tmpl"
+    web: "https://www.lessentiel.lu"
+    rss: "https://partner-feeds.lessentiel.lu/rss/lessentiel-fr"
   reporter:
     name: "Reporter"
     bgcolor: "#000000"
