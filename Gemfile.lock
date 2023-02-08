@@ -73,13 +73,13 @@ DEPENDENCIES
   feedjira
   htmlentities
   nokogiri
-  puma (>= 5.3.1)
+  puma
   rufus-scheduler
   sinatra
   sinatra-contrib
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.2.1p31
 
 BUNDLED WITH
-   2.2.32
+   2.4.6

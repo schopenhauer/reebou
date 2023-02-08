@@ -105,11 +105,11 @@ def partial(template, locals = {})
 end
 
 def find_url(entry)
-  if valid_url? entry['entry_id']
+  if valid_url? entry.entry_id
     entry.entry_id
-  elsif valid_url? entry['url']
+  elsif valid_url? entry.url
     entry.url
-  elsif valid_url? entry['link']
+  elsif valid_url? entry.link
     entry.link
   else
     '/'
@@ -144,7 +144,7 @@ def timestamp(s)
   s.nil? ? 'n.a.' : s.strftime(DATETIME_FORMAT)
 end
 
-# Made to measure to digest 100komma7 podcast feed
+# Made to measure for 100komma7 podcast feed
 def enumerate(s)
   s.strip.split("\n\t").map { |k| "- #{k}\n" }.join
 end
