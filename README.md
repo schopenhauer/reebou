@@ -24,7 +24,7 @@ bundle install
 foreman start
 ```
 
-`Procfile` and `app.yaml` have been configured with sane defaults. The app is ready to be deployed to the cloud.
+`Procfile` and `app.yaml` are configured with sane defaults. The app is ready to be deployed to the cloud.
 
 ## Caching
 
