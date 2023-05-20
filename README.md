@@ -1,17 +1,19 @@
 # reebou
 
-Gudde Moien &mdash; I am your friendly RSS and Atom news reader written in [Sinatra](http://www.sinatrarb.com/), a Ruby framework, and pre-configured to fetch and read [Luxembourgish](https://en.wikipedia.org/wiki/Luxembourgish) ([Lëtzebuergesch](https://lb.wikipedia.org/wiki/L%C3%ABtzebuergesch)) newspapers and tabloids.
+Gudde Moien!
+
+I am your friendly RSS and Atom news reader written in [Sinatra](http://www.sinatrarb.com/), the Ruby framework, and pre-configured to fetch and read [Luxembourgish](https://en.wikipedia.org/wiki/Luxembourgish) ([Lëtzebuergesch](https://lb.wikipedia.org/wiki/L%C3%ABtzebuergesch)) newspapers and tabloids.
 
 <img src="https://github.com/schopenhauer/reebou/blob/main/public/images/screenshot-sm.png">
 
 ## Features
 
-- I work out of the box (zero configuration)
-- I read RSS, XML and Atom feeds
+- I work out of the box
+- I can read RSS, XML and Atom feeds
 - I am respectful and cache feeds
 - I am lightening fast
 - I am colourful
-- I am made in Luxembourg with :heart:
+- I am made in Luxembourg with love :heart:
 
 ## Usage
 
@@ -22,7 +24,7 @@ bundle install
 foreman start
 ```
 
-The app is ready to be deployed to the cloud (e.g. Heroku, Azure, Google App Engine). The `Procfile` and `app.yaml` files have been configured with sane defaults.
+`Procfile` and `app.yaml` have been configured with sane defaults, so the app is ready to be deployed to the cloud.
 
 ## Caching
 
@@ -42,12 +44,12 @@ Reebou works out of the box with [Memcached](https://memcached.org/) and [Memcac
 | `CACHE_TIMEOUT` | `15` (15 seconds) | HTTP response timeout |
 | `AUTO_FETCH` | _optional_ | Automatic feed fetching<br>(e.g. `1h` = every hour) |
 
-### Memcached commands
+### Helpful commands (memcached)
 
-Please see below some basic commands to start and use a [Memcached](https://memcached.org/) server on your machine.
+Below some help commands to start and use a [memcached](https://memcached.org/) instance on your machine.
 
 ```sh
-systemctl start memcached
+sudo systemctl start memcached
 netstat -tap | grep memcached
 echo 'stats settings' | nc localhost 11211
 echo 'flush_all' | nc localhost 11211
@@ -63,13 +65,13 @@ echo 'flush_all' | nc localhost 11211
 
 ## Credits
 
-- [Sinatra](http://www.sinatrarb.com/) framework
-- [Feedjira](http://feedjira.com/)
-- [Puma](http://puma.io/)
-- [Memcached](https://memcached.org/)
-- [Foundation](http://foundation.zurb.com/) CSS framework
-- [Font Awesome](https://fontawesome.com/) CSS framework
-- [Google Fonts](https://fonts.google.com/)
+- [Sinatra](http://www.sinatrarb.com)
+- [Feedjira](http://feedjira.com)
+- [Puma](http://puma.io)
+- [Memcached](https://memcached.org)
+- [Foundation](http://foundation.zurb.com)
+- [Font Awesome](https://fontawesome.com)
+- [Google Fonts](https://fonts.google.com)
 
 ## License
 
