@@ -24,7 +24,7 @@ bundle install
 foreman start
 ```
 
-`Procfile` and `app.yaml` have been configured with sane defaults, so the app is ready to be deployed to the cloud.
+`Procfile` and `app.yaml` have been configured with sane defaults. The app is ready to be deployed to the cloud.
 
 ## Caching
 
@@ -65,12 +65,12 @@ echo 'flush_all' | nc localhost 11211
 
 ## Credits
 
-- [Sinatra](http://www.sinatrarb.com)
+- [Sinatra](http://www.sinatrarb.com) framework
 - [Feedjira](http://feedjira.com)
 - [Puma](http://puma.io)
 - [Memcached](https://memcached.org)
-- [Foundation](http://foundation.zurb.com)
-- [Font Awesome](https://fontawesome.com)
+- [Foundation](http://foundation.zurb.com) CSS framework
+- [Font Awesome](https://fontawesome.com) CSS framework
 - [Google Fonts](https://fonts.google.com)
 
 ## License
