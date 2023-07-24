@@ -24,7 +24,7 @@ feeds:
     bgcolor: "#ffffff"
     theme: "black"
     web: "https://www.wort.lu"
-    rss: "https://www.wort.lu/rss/de"
+    rss: "https://www.wort.lu/rss/"
   wurst:
     name: "Wurst"
     bgcolor: "#f1f1f1"

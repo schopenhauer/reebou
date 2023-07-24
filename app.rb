@@ -9,6 +9,7 @@ require 'htmlentities'
 require 'nokogiri'
 require 'rufus-scheduler'
 require 'dotenv'
+require 'uri'
 Dotenv.load
 
 set :public_folder, 'public'
@@ -21,15 +22,8 @@ end
 configure do
   APP_TITLE = "What's up, Lëtzebuerg?"
   DATETIME_FORMAT = '%B %e, %Y at %H:%M'
-  URL_REGEX = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix
-
   GOOGLE_ANALYTICS_ID = ENV['GOOGLE_ANALYTICS_ID'] # optional
   AUTO_FETCH = ENV['AUTO_FETCH'] # optional, e.g. 1h
-
-  MEMCACHED_URL = ENV['MEMCACHED_URL'] || ENV['MEMCACHIER_SERVERS']
-  MEMCACHED_USERNAME = ENV['MEMCACHED_USERNAME'] || ENV['MEMCACHIER_USERNAME']
-  MEMCACHED_PASSWORD = ENV['MEMCACHED_PASSWORD'] || ENV['MEMCACHIER_PASSWORD']
-  MEMCACHED_TTL = ENV['MEMCACHED_TTL'] || 604_800
 
   CACHE_OPTIONS = {
     cache: ENV['CACHE_TIME'] || 3_600,
@@ -37,6 +31,11 @@ configure do
     period: ENV['CACHE_PERIOD'] || 600,
     timeout: ENV['CACHE_TIMEOUT'] || 15
   }
+
+  MEMCACHED_URL = ENV['MEMCACHED_URL'] || ENV['MEMCACHIER_SERVERS']
+  MEMCACHED_USERNAME = ENV['MEMCACHED_USERNAME'] || ENV['MEMCACHIER_USERNAME']
+  MEMCACHED_PASSWORD = ENV['MEMCACHED_PASSWORD'] || ENV['MEMCACHIER_PASSWORD']
+  MEMCACHED_TTL = ENV['MEMCACHED_TTL'] || 604_800
 
   VERBOSE = ENV['VERBOSE'] || false
 
@@ -77,7 +76,7 @@ def fetch(url)
   puts "Fetching: #{url}" if VERBOSE
   begin
     client = Dalli::Client.new(
-      [ MEMCACHED_URL, 'localhost:11211' ].compact,
+      MEMCACHED_URL,
       username: MEMCACHED_USERNAME,
       password: MEMCACHED_PASSWORD,
       expires_in: MEMCACHED_TTL,
@@ -105,19 +104,25 @@ def partial(template, locals = {})
 end
 
 def find_url(entry)
-  if valid_url? entry.entry_id
-    entry.entry_id
-  elsif valid_url? entry.url
+  if entry.respond_to?('url')
     entry.url
-  elsif valid_url? entry.link
+  elsif entry.respond_to?('link')
     entry.link
+  elsif entry.respond_to?('guid')
+    entry.guid
+  elsif entry.respond_to?('entry_id')
+    entry.entry_id
   else
     '/'
   end
 end
 
-def valid_url?(url)
-  url =~ URL_REGEX
+def valid_url?(s)
+  if s.is_a? String
+    s.match(URI.regexp) ? false : true
+  else
+    false
+  end
 end
 
 def encode(s)

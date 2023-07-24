@@ -1,6 +1,7 @@
 <ul>
   <% entries.first(40).each do |entry| %>
   <li class="<%= feed['theme'] %>">
+  <% p entry %>
     <a href="<%= find_url(entry) %>" target="_blank" title="<%= clean (entry.summary ? entry.summary : entry.content) %>">
       <i class="fas fa-angle-right"></i> <%= clean(entry.title) %>
     </a>
